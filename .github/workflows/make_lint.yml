@@ -20,7 +20,7 @@ jobs:
         # make depends on poetry
       - name: Install dependencies
         run: |
-          make install
+          pip poetry install
       - name: Make packet
         run: |
           make brain-games
