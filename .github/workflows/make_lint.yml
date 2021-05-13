@@ -25,9 +25,6 @@ jobs:
       - name: Make
         run: |
           make brain-games
-          make build
-          make publish
-          make package-install
       - name: Run linter and pytest
         run: |
           make lint
