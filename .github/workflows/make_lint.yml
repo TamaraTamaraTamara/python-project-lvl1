@@ -22,6 +22,12 @@ jobs:
         run: |
           pip install poetry
           make install
+      - name: Make
+        run: |
+          make brain-games
+          make build
+          make publish
+          make package-install
       - name: Run linter and pytest
         run: |
           make lint
