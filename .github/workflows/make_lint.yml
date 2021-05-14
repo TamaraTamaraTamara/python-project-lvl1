@@ -23,9 +23,6 @@ jobs:
           pip install poetry
           pip install flake8
           make install
-      - name: Make packet
-        run: |
-          make brain-games
 
       - name: Run linter and pytest
         run: |
