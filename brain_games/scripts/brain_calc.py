@@ -6,6 +6,7 @@ from ..games.calc import welcome_user
 from ..games.calc import rules
 from ..games.calc import end_calc
 
+
 def main():
     greet()
     welcome_user()

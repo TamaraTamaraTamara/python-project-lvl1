@@ -2,7 +2,6 @@
 from ..games.even import greet
 from ..games.even import welcome_user
 from ..games.even import rules
-from ..games.even import check_even
 from ..games.even import end_even
 
 

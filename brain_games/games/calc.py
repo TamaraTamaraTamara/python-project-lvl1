@@ -12,7 +12,7 @@ def welcome_user():
     global name
     name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
-    return name 
+    return name
 
 
 def rules():
@@ -25,6 +25,7 @@ def calc():
     y = randint(1, 100)
     list = ['+', '-', '*']
     symbol = choice(list)
+    err_msg = " is wrong answer ;(. Correct answer was "
     question = str(x) + ' ' + str(symbol) + ' ' + str(y)
     if symbol == '+':
         correct_answer = x + y
@@ -32,16 +33,16 @@ def calc():
         correct_answer = x - y
     elif symbol == '*':
         correct_answer = x * y
-    print ('Question: ' + question)
+    print('Question: ' + question)
     answer = input('Your answer: ')
     if int(answer) == correct_answer:
         print('Correct!')
         return True
     else:
-        print (str(answer) + " is wrong answer ;(. Correct answer was " + str(correct_answer))
+        print(answer + err_msg + str(correct_answer))
         return False
-      
-   
+
+
 def end_calc():
     global name
     counter = 1
@@ -49,8 +50,8 @@ def end_calc():
     while counter < 4:
         result = calc()
         counter = counter + 1
-        if result == True and counter == 4:
+        if result is True and counter == 4:
             print('Congratulations, {}!'.format(name))
-        elif result == False:
+        elif result is False:
             print("Let's try again, {}!".format(name))
-            return False 
+            return False
