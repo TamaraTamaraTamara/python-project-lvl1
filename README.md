@@ -4,4 +4,5 @@
 [![Make-Lint Status](https://github.com/TamaraTamaraTamara/python-project-lvl1/workflows/Python%20CI/badge.svg)](https://github.com/TamaraTamaraTamara/python-project-lvl1/actions)
 
 ### Recording:
-https://asciinema.org/a/415385
+https://asciinema.org/a/415385 #brain-even
+https://asciinema.org/a/4MXFJSfS3sv0K4zAstpm5dHOc #brain-calc

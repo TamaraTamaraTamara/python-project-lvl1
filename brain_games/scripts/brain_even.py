@@ -1,9 +1,9 @@
 #!/usr/bin/env python
-from brain_games.even import greet
-from brain_games.even import welcome_user
-from brain_games.even import rules
-from brain_games.even import check_even
-from brain_games.even import end_even
+from ..games.even import greet
+from ..games.even import welcome_user
+from ..games.even import rules
+from ..games.even import check_even
+from ..games.even import end_even
 
 
 def main():
