@@ -6,3 +6,4 @@
 ### Recording:
 https://asciinema.org/a/415385 #brain-even
 https://asciinema.org/a/4MXFJSfS3sv0K4zAstpm5dHOc #brain-calc
+https://asciinema.org/a/Bk58ZEI6UPcCOYh7GkvozCesx #brain-gcd
