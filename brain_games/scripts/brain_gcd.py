@@ -6,9 +6,9 @@ from ..games.gcd import end_gcd
 
 
 def main():
-    welcome_user()
+    name = welcome_user()
     rules()
-    end_gcd()
+    end_gcd(name)
 
 
 if __name__ == '__main__':

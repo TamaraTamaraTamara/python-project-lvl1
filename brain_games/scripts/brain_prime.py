@@ -6,9 +6,9 @@ from ..games.prime import end_prime
 
 
 def main():
-    welcome_user()
+    name = welcome_user()
     rules()
-    end_prime()
+    end_prime(name)
 
 
 if __name__ == '__main__':

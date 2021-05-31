@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 from random import randint
-from .welcome import name
 
 
 def rules():
@@ -29,7 +28,7 @@ def ask_gcd():
         return False
 
 
-def end_gcd():
+def end_gcd(name):
     counter = 1
     result = True
     while counter < 4:

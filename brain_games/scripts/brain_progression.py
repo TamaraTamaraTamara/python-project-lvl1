@@ -6,9 +6,9 @@ from ..games.progression import end_progression
 
 
 def main():
-    welcome_user()
+    name = welcome_user()
     rules()
-    end_progression()
+    end_progression(name)
 
 
 if __name__ == '__main__':

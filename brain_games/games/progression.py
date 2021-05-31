@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 from random import randint
-from .welcome import name
 
 
 def rules():
@@ -30,7 +29,7 @@ def ask_progression():
         return False
 
 
-def end_progression():
+def end_progression(name):
     counter = 1
     result = True
     while counter < 4:

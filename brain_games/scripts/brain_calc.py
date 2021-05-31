@@ -6,9 +6,9 @@ from ..games.calc import end_calc
 
 
 def main():
-    welcome_user()
+    name = welcome_user()
     rules()
-    end_calc()
+    end_calc(name)
 
 
 if __name__ == '__main__':

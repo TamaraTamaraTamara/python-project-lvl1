@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 from random import choice, randint
-from .welcome import name
 
 
 def rules():
@@ -31,7 +30,7 @@ def calc():
         return False
 
 
-def end_calc():
+def end_calc(name):
     counter = 1
     result = True
     while counter < 4:
