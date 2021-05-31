@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import prompt
+name = ''
 
 
 def welcome_user():
