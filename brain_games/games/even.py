@@ -1,18 +1,7 @@
 #!/usr/bin/env python
 
-import prompt
 from random import randint
-
-
-def greet():
-    print('Welcome to the Brain Games!')
-
-
-def welcome_user():
-    global name
-    name = prompt.string('May I have your name? ')
-    print('Hello, {}!'.format(name))
-    return name
+from .welcome import name
 
 
 def rules():
@@ -39,7 +28,6 @@ def check_even():
 
 
 def end_even():
-    global name
     counter = 1
     result = True
     while counter < 4:

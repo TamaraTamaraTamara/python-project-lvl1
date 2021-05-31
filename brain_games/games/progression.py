@@ -1,18 +1,7 @@
 #!/usr/bin/env python
 
-import prompt
 from random import randint
-
-
-def greet():
-    print('Welcome to the Brain Games!')
-
-
-def welcome_user():
-    global name
-    name = prompt.string('May I have your name? ')
-    print('Hello, {}!'.format(name))
-    return name
+from .welcome import name
 
 
 def rules():
@@ -28,17 +17,10 @@ def ask_progression():
     replaced_symbol = sequence[index_replacement]
     sequence[index_replacement] = ".."
     err_msg = " is wrong answer ;(. Correct answer was "
-
-    # print('PROVERKA- start,step,seq_len,index_replacement,
-    # replaced_symbol',start,step,seq_len,index_replacement,replaced_symbol)
-
-    # print question
-
     print('Question: ', end='')
     for i in sequence:
         print(i, end=' ')
     print()
-    # check answer
     answer = input('Your answer: ')
     if int(answer) == replaced_symbol:
         print('Correct!')
@@ -49,7 +31,6 @@ def ask_progression():
 
 
 def end_progression():
-    global name
     counter = 1
     result = True
     while counter < 4:

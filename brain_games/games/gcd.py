@@ -1,18 +1,7 @@
 #!/usr/bin/env python
 
-import prompt
 from random import randint
-
-
-def greet():
-    print('Welcome to the Brain Games!')
-
-
-def welcome_user():
-    global name
-    name = prompt.string('May I have your name? ')
-    print('Hello, {}!'.format(name))
-    return name
+from .welcome import name
 
 
 def rules():
@@ -26,7 +15,6 @@ def find_gcd(x, y):
 
 
 def ask_gcd():
-    global name
     x = randint(1, 100)
     y = randint(1, 100)
     err_msg = " is wrong answer ;(. Correct answer was "
@@ -42,7 +30,6 @@ def ask_gcd():
 
 
 def end_gcd():
-    global name
     counter = 1
     result = True
     while counter < 4:

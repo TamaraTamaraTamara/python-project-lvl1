@@ -1,18 +1,7 @@
 #!/usr/bin/env python
 
-import prompt
 from random import choice, randint
-
-
-def greet():
-    print('Welcome to the Brain Games!')
-
-
-def welcome_user():
-    global name
-    name = prompt.string('May I have your name? ')
-    print('Hello, {}!'.format(name))
-    return name
+from .welcome import name
 
 
 def rules():
@@ -20,7 +9,6 @@ def rules():
 
 
 def calc():
-    global name
     x = randint(1, 100)
     y = randint(1, 100)
     list = ['+', '-', '*']
@@ -44,7 +32,6 @@ def calc():
 
 
 def end_calc():
-    global name
     counter = 1
     result = True
     while counter < 4:
