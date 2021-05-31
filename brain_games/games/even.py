@@ -10,7 +10,6 @@ def rules():
 
 def check_even():
     x = randint(1, 100)
-    global name
     print('Question: ' + str(x))
     answer = input('Your answer: ')
     if x % 2 == 0 and answer == 'yes' or x % 2 != 0 and answer == 'no':
