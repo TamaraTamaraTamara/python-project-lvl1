@@ -6,9 +6,9 @@ from ..games.even import end_even
 
 
 def main():
-    welcome_user()
+    name2 = welcome_user()
     rules()
-    end_even()
+    end_even(name2)
 
 
 if __name__ == '__main__':

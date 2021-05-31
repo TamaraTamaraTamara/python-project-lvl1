@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 from random import randint
-from .welcome import name
 
 
 def rules():
@@ -26,14 +25,14 @@ def check_even():
             return False
 
 
-def end_even():
+def end_even(name2):
     counter = 1
     result = True
     while counter < 4:
         result = check_even()
         counter = counter + 1
         if result is True and counter == 4:
-            print('Congratulations, {}!'.format(name))
+            print('Congratulations, {}!'.format(name2))
         elif result is False:
-            print("Let's try again, {}!".format(name))
+            print("Let's try again, {}!".format(name2))
             return False
