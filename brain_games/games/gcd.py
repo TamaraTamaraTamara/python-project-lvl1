@@ -26,16 +26,3 @@ def ask_gcd():
     else:
         print(answer + err_msg + str(find_gcd(x, y)))
         return False
-
-
-def end_gcd(name):
-    counter = 1
-    result = True
-    while counter < 4:
-        result = ask_gcd()
-        counter = counter + 1
-        if result is True and counter == 4:
-            print('Congratulations, {}!'.format(name))
-        elif result is False:
-            print("Let's try again, {}!".format(name))
-            return False

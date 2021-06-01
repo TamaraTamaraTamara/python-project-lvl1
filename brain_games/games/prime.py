@@ -36,16 +36,3 @@ def ask_prime():
             return False
     else:
         return False
-
-
-def end_prime(name):
-    counter = 1
-    result = True
-    while counter < 4:
-        result = ask_prime()
-        counter = counter + 1
-        if result is True and counter == 4:
-            print('Congratulations, {}!'.format(name))
-        elif result is False:
-            print("Let's try again, {}!".format(name))
-            return False

@@ -23,16 +23,3 @@ def check_even():
             return False
         else:
             return False
-
-
-def end_even(name):
-    counter = 1
-    result = True
-    while counter < 4:
-        result = check_even()
-        counter = counter + 1
-        if result is True and counter == 4:
-            print('Congratulations, {}!'.format(name))
-        elif result is False:
-            print("Let's try again, {}!".format(name))
-            return False

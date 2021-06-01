@@ -27,16 +27,3 @@ def ask_progression():
     else:
         print(answer + err_msg + str(replaced_symbol))
         return False
-
-
-def end_progression(name):
-    counter = 1
-    result = True
-    while counter < 4:
-        result = ask_progression()
-        counter = counter + 1
-        if result is True and counter == 4:
-            print('Congratulations, {}!'.format(name))
-        elif result is False:
-            print("Let's try again, {}!".format(name))
-            return False
