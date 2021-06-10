@@ -1,28 +1,20 @@
 #!/usr/bin/env python
 
 from random import randint
+from ..common.gameplay import ask_question
+from ..common.gameplay import get_answer
+from ..common.gameplay import check_answer
 
 
-def rules():
-    print('Find the greatest common divisor of given numbers.')
-
-
-def find_gcd(x, y):
-    while y != 0:
-        x, y = y, x % y
-    return x
-
-
-def ask_gcd():
+def gcd_game():
     x = randint(1, 100)
     y = randint(1, 100)
-    err_msg = " is wrong answer ;(. Correct answer was "
-    question = str(x) + ' ' + str(y)
-    print('Question: ' + question)
-    answer = input('Your answer: ')
-    if int(answer) == find_gcd(x, y):
-        print('Correct!')
-        return True
-    else:
-        print(answer + err_msg + str(find_gcd(x, y)))
+    ask_question(str(x) + ' ' + str(y))
+
+    while y != 0:
+        x, y = y, x % y
+
+    try:
+        return check_answer(int(get_answer()), x)
+    except ValueError:
         return False

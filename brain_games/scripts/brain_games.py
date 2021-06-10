@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from ..games.cli import welcome_user
+from ..common.cli import welcome_user
 
 
 def main():

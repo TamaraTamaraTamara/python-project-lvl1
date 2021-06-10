@@ -1,15 +1,16 @@
 #!/usr/bin/env python
 
-from ..games.welcome import welcome_user
-from ..games.gameplay import gameplay
-from ..games.even import rules
-from ..games.even import check_even
+from ..common.gameplay import welcome_user
+from ..common.gameplay import gameplay
+from ..games.even import even_game
+
+rules_msg = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def main():
     name = welcome_user()
-    rules()
-    gameplay(name, check_even)
+    print(rules_msg)
+    gameplay(name, even_game)
 
 
 if __name__ == '__main__':

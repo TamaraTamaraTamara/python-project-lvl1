@@ -1,15 +1,16 @@
 #!/usr/bin/env python
 
-from ..games.welcome import welcome_user
-from ..games.gameplay import gameplay
-from ..games.prime import rules
-from ..games.prime import ask_prime
+from ..common.gameplay import welcome_user
+from ..common.gameplay import gameplay
+from ..games.prime import prime_game
+
+rules_msg = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def main():
     name = welcome_user()
-    rules()
-    gameplay(name, ask_prime)
+    print(rules_msg)
+    gameplay(name, prime_game)
 
 
 if __name__ == '__main__':

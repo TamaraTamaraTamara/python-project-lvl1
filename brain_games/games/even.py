@@ -1,25 +1,21 @@
 #!/usr/bin/env python
 
 from random import randint
+from ..common.gameplay import ask_question
+from ..common.gameplay import get_answer
+from ..common.gameplay import check_answer
 
 
-def rules():
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-
-
-def check_even():
+def even_game():
     x = randint(1, 100)
-    print('Question: ' + str(x))
-    answer = input('Your answer: ')
-    if x % 2 == 0 and answer == 'yes' or x % 2 != 0 and answer == 'no':
-        print('Correct!')
-        return True
-    else:
-        if answer == 'yes':
-            print("'yes' is wrong answer ;(. Correct answer was 'no'.")
-            return False
-        elif answer == 'no':
-            print("'no' is wrong answer ;(. Correct answer was 'yes'.")
-            return False
-        else:
-            return False
+    ask_question(str(x))
+
+    if x % 2 == 0:
+        correct_answer = 'yes'
+    elif x % 2 != 0:
+        correct_answer = 'no'
+
+    try:
+        return check_answer(get_answer(), correct_answer)
+    except ValueError:
+        return False

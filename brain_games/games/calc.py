@@ -1,30 +1,27 @@
 #!/usr/bin/env python
 
 from random import choice, randint
+from ..common.gameplay import ask_question
+from ..common.gameplay import get_answer
+from ..common.gameplay import check_answer
 
 
-def rules():
-    print('What is the result of the expression?')
-
-
-def calc():
+def calc_game():
     x = randint(1, 100)
     y = randint(1, 100)
     list = ['+', '-', '*']
     symbol = choice(list)
-    err_msg = " is wrong answer ;(. Correct answer was "
-    question = str(x) + ' ' + str(symbol) + ' ' + str(y)
+
     if symbol == '+':
         correct_answer = x + y
     elif symbol == '-':
         correct_answer = x - y
     elif symbol == '*':
         correct_answer = x * y
-    print('Question: ' + question)
-    answer = input('Your answer: ')
-    if int(answer) == correct_answer:
-        print('Correct!')
-        return True
-    else:
-        print(answer + err_msg + str(correct_answer))
+
+    ask_question(str(x) + ' ' + str(symbol) + ' ' + str(y))
+
+    try:
+        return check_answer(int(get_answer()), correct_answer)
+    except ValueError:
         return False

@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 
 from random import randint
-
-
-def rules():
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+from ..common.gameplay import ask_question
+from ..common.gameplay import get_answer
+from ..common.gameplay import check_answer
 
 
 def check_prime(x):
@@ -16,23 +15,19 @@ def check_prime(x):
             return True
 
 
-def ask_prime():
+def prime_game():
     x = randint(1, 100)
-    print('Question: ' + str(x))
-    answer = input('Your answer: ')
-    if answer == 'yes':
-        if check_prime(x) is True:
-            print('Correct!')
-            return True
+    ask_question(str(x))
+
+    if x > 0:
+        for i in range(2, x):
+            if (x % i) == 0:
+                correct_answer = "no"
+                break
         else:
-            print("'yes' is wrong answer ;(. Correct answer was 'no'.")
-            return False
-    elif answer == 'no':
-        if check_prime(x) is False:
-            print('Correct!')
-            return True
-        else:
-            print("'no' is wrong answer ;(. Correct answer was 'yes'.")
-            return False
-    else:
+            correct_answer = "yes"
+
+    try:
+        return check_answer(get_answer(), correct_answer)
+    except ValueError:
         return False
