@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 
-from ..common.gameplay import welcome_user
-from ..common.gameplay import gameplay
-from ..games.calc import calc_game
+from ..gameplay import welcome_user
+from ..gameplay import gameplay
+from brain_games.games.calc import calc_game
 
 
-rules_msg = 'What is the result of the expression?'
+RULES_MSG = 'What is the result of the expression?'
 
 
 def main():
     name = welcome_user()
-    print(rules_msg)
+    print(RULES_MSG)
     gameplay(name, calc_game)
 
 

@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 
-from ..common.gameplay import welcome_user
-from ..common.gameplay import gameplay
-from ..games.gcd import gcd_game
+from ..gameplay import welcome_user
+from ..gameplay import gameplay
+from brain_games.games.gcd import gcd_game
 
-rules_msg = 'Find the greatest common divisor of given numbers.'
+RULES_MSG = 'Find the greatest common divisor of given numbers.'
 
 
 def main():
     name = welcome_user()
-    print(rules_msg)
+    print(RULES_MSG)
     gameplay(name, gcd_game)
 
 

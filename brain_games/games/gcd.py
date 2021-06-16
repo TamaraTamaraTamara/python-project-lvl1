@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 
 from random import randint
-from ..common.gameplay import ask_question
-from ..common.gameplay import get_answer
-from ..common.gameplay import check_answer
+from ..gameplay import ask_question
 
 
 def gcd_game():
@@ -14,7 +12,4 @@ def gcd_game():
     while y != 0:
         x, y = y, x % y
 
-    try:
-        return check_answer(int(get_answer()), x)
-    except ValueError:
-        return False
+    return x

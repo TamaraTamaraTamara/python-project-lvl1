@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 
 from random import randint
-from ..common.gameplay import ask_question
-from ..common.gameplay import get_answer
-from ..common.gameplay import check_answer
+from ..gameplay import ask_question
 
 
 def progression_game():
@@ -21,7 +19,4 @@ def progression_game():
 
     ask_question(print_sequence)
 
-    try:
-        return check_answer(int(get_answer()), replaced_number)
-    except ValueError:
-        return False
+    return replaced_number

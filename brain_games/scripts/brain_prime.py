@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 
-from ..common.gameplay import welcome_user
-from ..common.gameplay import gameplay
-from ..games.prime import prime_game
+from ..gameplay import welcome_user
+from ..gameplay import gameplay
+from brain_games.games.prime import prime_game
 
-rules_msg = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+RULES_MSG = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def main():
     name = welcome_user()
-    print(rules_msg)
+    print(RULES_MSG)
     gameplay(name, prime_game)
 
 

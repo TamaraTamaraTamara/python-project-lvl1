@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from ..common.cli import welcome_user
+from ..cli import welcome_user
 
 
 def main():

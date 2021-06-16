@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 
 from random import choice, randint
-from ..common.gameplay import ask_question
-from ..common.gameplay import get_answer
-from ..common.gameplay import check_answer
+from ..gameplay import ask_question
 
 
 def calc_game():
@@ -12,16 +10,11 @@ def calc_game():
     list = ['+', '-', '*']
     symbol = choice(list)
 
-    if symbol == '+':
-        correct_answer = x + y
-    elif symbol == '-':
-        correct_answer = x - y
-    elif symbol == '*':
-        correct_answer = x * y
-
     ask_question(str(x) + ' ' + str(symbol) + ' ' + str(y))
 
-    try:
-        return check_answer(int(get_answer()), correct_answer)
-    except ValueError:
-        return False
+    if symbol == '+':
+        return x + y
+    elif symbol == '-':
+        return x - y
+    elif symbol == '*':
+        return x * y
