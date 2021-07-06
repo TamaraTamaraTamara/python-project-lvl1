@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 
 from random import randint
-from ..gameplay import ask_question
+
+RULES_MSG = 'What number is missing in the progression?'
 
 
-def progression_game():
+def game():
     start = randint(1, 50)
     step = randint(1, 10)
     seq_len = randint(5, 10)
@@ -17,6 +18,4 @@ def progression_game():
     for i in sequence:
         print_sequence += str(i) + ' '
 
-    ask_question(print_sequence)
-
-    return replaced_number
+    return print_sequence, replaced_number

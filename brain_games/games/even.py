@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 
 from random import randint
-from ..gameplay import ask_question
+
+RULES_MSG = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def even_game():
+def game():
     x = randint(1, 100)
-    ask_question(str(x))
+    question = str(x)
 
     if x % 2 == 0:
-        return 'yes'
+        return question, 'yes'
     elif x % 2 != 0:
-        return 'no'
+        return question, 'no'

@@ -5,27 +5,19 @@ WELCOME_MSG = "Welcome to the Brain Games!"
 ERR_MSG = " is wrong answer ;(. Correct answer was "
 
 
-def welcome_user():
+def gameplay(gamename):
     print(WELCOME_MSG)
     name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
-    return name
 
+    print(gamename.RULES_MSG)
 
-def ask_question(gamename):
-    print('Question: ' + str(gamename))
-
-
-def get_answer():
-    return input('Your answer: ')
-
-
-def gameplay(name, gamename):
     counter = 1
     while counter < 4:
-        answer = gamename()
+        question, answer = gamename.game()
+        print('Question: ' + question)
+        usr_answer = input('Your answer: ')
         counter += 1
-        usr_answer = get_answer()
 
         try:
             usr_answer = int(usr_answer)

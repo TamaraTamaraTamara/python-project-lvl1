@@ -1,16 +1,17 @@
 #!/usr/bin/env python
 
 from random import randint
-from ..gameplay import ask_question
+
+RULES_MSG = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def prime_game():
+def game():
     x = randint(1, 100)
-    ask_question(str(x))
+    question = str(x)
 
     if x > 0:
         for i in range(2, x):
             if (x % i) == 0:
-                return "no"
+                return question, "no"
         else:
-            return "yes"
+            return question, "yes"
