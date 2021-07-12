@@ -14,8 +14,8 @@ def game():
     question = str(x) + ' ' + str(symbol) + ' ' + str(y)
 
     if symbol == '+':
-        return question, x + y
+        return question, str(x + y)
     elif symbol == '-':
-        return question, x - y
+        return question, str(x - y)
     elif symbol == '*':
-        return question, x * y
+        return question, str(x * y)

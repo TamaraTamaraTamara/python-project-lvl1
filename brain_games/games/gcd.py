@@ -13,4 +13,4 @@ def game():
     while y != 0:
         x, y = y, x % y
 
-    return question, x
+    return question, str(x)

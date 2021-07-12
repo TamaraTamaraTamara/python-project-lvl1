@@ -12,6 +12,6 @@ def game():
     if x > 0:
         for i in range(2, x):
             if (x % i) == 0:
-                return question, "no"
+                return question, str("no")
         else:
-            return question, "yes"
+            return question, str("yes")

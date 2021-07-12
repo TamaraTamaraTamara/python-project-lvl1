@@ -18,4 +18,4 @@ def game():
     for i in sequence:
         print_sequence += str(i) + ' '
 
-    return print_sequence, replaced_number
+    return print_sequence, str(replaced_number)

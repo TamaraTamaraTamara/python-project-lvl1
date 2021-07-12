@@ -5,30 +5,27 @@ WELCOME_MSG = "Welcome to the Brain Games!"
 ERR_MSG = " is wrong answer ;(. Correct answer was "
 
 
-def engine(name):
+def engine(get_question_and_answer):
     print(WELCOME_MSG)
     name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
 
-    print(name.RULES_MSG)
+    print(get_question_and_answer.RULES_MSG)
 
     counter = 1
-    while counter < 4:
-        question, answer = name.game()
+    number_of_tries = 4
+    while counter < number_of_tries:
+        question, answer = get_question_and_answer.game()
         print('Question: ' + question)
-        usr_answer = input('Your answer: ')
-        counter += 1
+        user_answer = input('Your answer: ')
 
-        try:
-            usr_answer = int(usr_answer)
-        except ValueError:
-            None
-
-        if usr_answer == answer:
+        if user_answer == answer:
             print('Correct!')
-            if counter == 4:
-                print('Congratulations, {}!'.format(name))
+            counter += 1
+
         else:
-            print('\'{0}\' {1} \'{2}\''.format(usr_answer, ERR_MSG, answer))
+            print('\'{0}\' {1} \'{2}\''.format(user_answer, ERR_MSG, answer))
             print("Let's try again, {}!".format(name))
-            break
+            return
+
+    print('Congratulations, {}!'.format(name))

@@ -3,6 +3,7 @@
 from brain_games import core
 from brain_games.games import calc
 
+
 def main():
     core.engine(calc)
 

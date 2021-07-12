@@ -10,6 +10,6 @@ def game():
     question = str(x)
 
     if x % 2 == 0:
-        return question, 'yes'
-    elif x % 2 != 0:
-        return question, 'no'
+        return question, str('yes')
+    else:
+        return question, str('no')
